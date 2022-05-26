@@ -8,7 +8,7 @@ import {KeycloakService} from "keycloak-angular";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'angular-tour-of-heroes';
+  title = 'Demo';
 
   public isLoggedIn = false;
   public userProfile: KeycloakProfile | null = null;
@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
 
     if (this.isLoggedIn) {
       this.userProfile = await this.keycloak.loadUserProfile();
+      console.log('UserProfile: '+this.userProfile);
     }
   }
 
