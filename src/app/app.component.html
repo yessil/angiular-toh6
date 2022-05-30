@@ -1,4 +1,5 @@
 <h1>{{title}}</h1>
+<h2>{{ today  | date}}</h2>
 <button *ngIf="isLoggedIn" type="button" (click)="logout()">Log out</button>
 <button *ngIf="!isLoggedIn" type="button" (click)="login()">Log in</button>
 

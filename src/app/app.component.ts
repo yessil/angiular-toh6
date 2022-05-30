@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {KeycloakProfile} from "keycloak-js";
 import {KeycloakService} from "keycloak-angular";
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,11 @@ export class AppComponent implements OnInit {
 
   public isLoggedIn = false;
   public userProfile: KeycloakProfile | null = null;
+  public today: Date;
 
-  constructor(private readonly keycloak: KeycloakService) {}
+  constructor(private readonly keycloak: KeycloakService) {
+    this.today = new Date();
+  }
 
   public async ngOnInit() {
     this.isLoggedIn = await this.keycloak.isLoggedIn();
