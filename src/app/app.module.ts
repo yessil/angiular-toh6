@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import {ArmComponent} from "./arm/arm.component";
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -35,7 +36,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    ArmComponent
   ],
 
   imports: [
