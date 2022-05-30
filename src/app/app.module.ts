@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import {ArmComponent} from "./arm/arm.component";
+import {TrPipe} from "./pipes/tr-pipe";
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -37,7 +38,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    ArmComponent
+    ArmComponent,
+    TrPipe
   ],
 
   imports: [
